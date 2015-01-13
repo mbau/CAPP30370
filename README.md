@@ -1,6 +1,6 @@
 # Michael Bau
 
-- Major(s)
-- Year (Junior, Senior, etc.)
+- Computer Science
+- Senior
 
 ![Michael Bau](#.jpg)
