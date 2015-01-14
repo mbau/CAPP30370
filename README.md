@@ -3,4 +3,4 @@
 - Computer Science
 - Senior
 
-![Michael Bau](#.jpg)
+![Michael Bau](mbau.jpg)
