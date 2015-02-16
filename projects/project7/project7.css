@@ -10,6 +10,14 @@ body {
 	background-color: lightblue;
 }
 
+h2 {
+	clear:both;
+}
+
+footer {
+	text-align: center;
+}
+
 @media screen and (min-width: 600px) {
 	nav {
 		float: left;
@@ -19,8 +27,9 @@ body {
 		float: right;
 		width: 70%;
 	}
-	body {
-		background-color: lightpink;
+	footer {
+		clear:both;
+		text-align: center;
 	}
 }
 
@@ -28,8 +37,5 @@ body {
 	img {
 		float: right;
 		max-width: 40%;
-	}
-	body {
-		background-color: lightgreen;
 	}
 }
