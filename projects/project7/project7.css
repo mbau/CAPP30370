@@ -7,10 +7,10 @@ img {
 }
 
 body {
-	background-color: blue;
+	background-color: lightblue;
 }
 
-@media screen and (min-width: 600px;) {
+@media screen and (min-width: 600px) {
 	nav {
 		float: left;
 		width: 30%;
@@ -20,16 +20,16 @@ body {
 		width: 70%;
 	}
 	body {
-		background-color: lightgreen;
+		background-color: lightpink;
 	}
 }
 
-@media screen and (min-width: 800px;) {
+@media screen and (min-width: 800px) {
 	img {
 		float: right;
 		max-width: 40%;
 	}
 	body {
-		background-color: lightblue;
+		background-color: lightgreen;
 	}
 }
