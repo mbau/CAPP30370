@@ -1,0 +1,35 @@
+nav ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	background-color: blue;
+}
+
+@media screen and (min-width: 600px;) {
+	nav {
+		float: left;
+		width: 30%;
+	}
+	main {
+		float: right;
+		width: 70%;
+	}
+	body {
+		background-color: lightgreen;
+	}
+}
+
+@media screen and (min-width: 800px;) {
+	img {
+		float: right;
+		max-width: 40%;
+	}
+	body {
+		background-color: lightblue;
+	}
+}
