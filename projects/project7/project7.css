@@ -10,8 +10,17 @@ body {
 	background-color: lightblue;
 }
 
+h1 {
+	font-family: helvetica, sans-serif;
+}
+
 h2 {
 	clear:both;
+	font-family: helvetica, sans-serif;
+}
+
+p, li {
+	font-family: garamond, serif;
 }
 
 footer {
