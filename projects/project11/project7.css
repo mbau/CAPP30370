@@ -1,0 +1,50 @@
+nav ul {
+	list-style: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	background-color: lightblue;
+}
+
+h1 {
+	font-family: helvetica, sans-serif;
+}
+
+h2 {
+	clear:both;
+	font-family: helvetica, sans-serif;
+}
+
+p, li {
+	font-family: garamond, serif;
+}
+
+footer {
+	text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+	nav {
+		float: left;
+		width: 30%;
+	}
+	main {
+		float: right;
+		width: 70%;
+	}
+	footer {
+		clear:both;
+		text-align: center;
+	}
+}
+
+@media screen and (min-width: 800px) {
+	img {
+		float: right;
+		max-width: 40%;
+	}
+}
