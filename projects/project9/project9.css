@@ -1,0 +1,34 @@
+html {padding:2em; font-family:helvetica, sans-serif;}
+img {cursor:pointer; max-width:100%;}
+.box {width:300px; height:300px; border:1px solid #000; cursor:pointer;}
+
+.photo1:hover {
+	transform: rotate(180deg);
+}
+
+.photo2:hover {
+	transform: scale(1.5);
+}
+
+.photo3:hover {
+	transform: skewY(20deg);
+}
+
+.box1 {
+	background-color: orange;
+	box-shadow: 5px 5px black;
+}
+
+.box1:hover {
+	background-color: black;
+	box-shadow: 5px 5px orange;
+}
+
+.box2:hover {
+	transform: rotate(25deg) scale(1.1);
+	transform-origin: right top;
+}
+
+@media only screen and (min-width:800px){
+  section {display:inline-block; vertical-align:top; width:33%;}
+}
