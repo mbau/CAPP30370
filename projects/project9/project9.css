@@ -2,12 +2,24 @@ html {padding:2em; font-family:helvetica, sans-serif;}
 img {cursor:pointer; max-width:100%;}
 .box {width:300px; height:300px; border:1px solid #000; cursor:pointer;}
 
+.photo1 {
+	transition: transform 1s ease;
+}
+
 .photo1:hover {
 	transform: rotate(180deg);
 }
 
+.photo2 {
+	transition: transform 1s ease;
+}
+
 .photo2:hover {
 	transform: scale(1.5);
+}
+
+.photo3 {
+	transition: transform 1s ease;
 }
 
 .photo3:hover {
@@ -17,11 +29,16 @@ img {cursor:pointer; max-width:100%;}
 .box1 {
 	background-color: orange;
 	box-shadow: 5px 5px black;
+	transition: background-color 1s ease, box-shadow 1s ease;
 }
 
 .box1:hover {
 	background-color: black;
 	box-shadow: 5px 5px orange;
+}
+
+.box2 {
+	transition: transform 1s linear, transform-origin 1s linear;
 }
 
 .box2:hover {
