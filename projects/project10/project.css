@@ -9,10 +9,40 @@ body {margin:0; background-color:#000;}
   height:50px;
   border-radius:50%;
   border:1px solid rgba(0,0,0,0.5);
+  -webkit-animation: bounceBall 2s linear infinite;
+}
+
+@-webkit-keyframes bounceBall {
+  0% {
+    background-color: red;
+    top: 350px;
+  }
+  20% {background-color: orange;}
+  40% {background-color: yellow;}
+  50% {top: 0px;}
+  60% {background-color: green;}
+  80% {background-color: blue;}
+  100% {
+    background-color: purple;
+    top: 350px;
+  }
 }
 
 img {
   position:absolute;
   bottom:0;
   left:0;
+  -webkit-animation: catLeftRight 4s linear infinite;
+}
+
+@-webkit-keyframes catLeftRight {
+  0% {
+    left: 0px;
+    transform: rotateY(180deg);
+  }
+  50% {left: 542px;}
+  100% {
+    left: 0px;
+    transform: rotateY(-180deg);
+  }
 }
