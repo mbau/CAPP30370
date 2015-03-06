@@ -1,0 +1,249 @@
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    line-height: 1.4em;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+figure {}
+
+figcaption {
+    line-height: 1.2em;
+}
+
+img {
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 1em 0 0.25em;
+    font-family: "Times New Roman", Times, serif;
+}
+
+header h1,
+header p {
+    display: inline;
+}
+
+header h1 {
+    margin: 0;
+    position: absolute;
+    top: 45px;
+}
+
+.nav-skip {
+    margin: 0;
+    float: right;
+    background-color: white;
+    text-align: center;
+    padding: 10px 15px;
+    position: absolute;
+    top: 35px;
+    right: 15px;
+}
+
+header a:link {
+    text-decoration: none;
+}
+
+main h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 1em .75em 0.25em;
+    color: #b18d03;
+}
+
+main h1,
+h2 {
+    border-bottom: 3px solid #B18D03;
+}
+
+main p {
+    margin: 0 1em 1em;
+}
+
+header,
+.site-footer {
+    padding: 1em;
+    background: #002b5b;
+    color: #fff;
+}
+
+header {
+    height: 125px;
+    padding: 1em;
+    background-image: url(images/header-small.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+}
+
+nav {}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav a {
+    display: block;
+    padding: 0.5em 1em;
+    color: #333;
+    background-color: #eee;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}
+
+blockquote {
+    padding: 1em;
+    border-left: 3px solid #dadada;
+}
+
+blockquote p {
+    margin: 0 0 0.4em;
+    color: #002b5b;
+    font-size: 1.8em;
+    line-height: 1.2em;
+    font-family: "Times New Roman", Times, serif;
+}
+
+blockquote footer {
+    font-style: italic;
+}
+
+.job-title {
+    font-weight: bold;
+}
+
+.site-footer {
+    clear: both;
+    text-align: center;
+    padding: 2em 0;
+}
+
+.site-footer img {
+    max-width: 200px;
+}
+
+@media only screen and (min-width: 600px) {
+    header {
+        background-image: url(images/header-medium.jpg);
+        height: 400px;
+    }
+    header h1 {
+        font-size: 3em;
+        top: 75px;
+        left: 75px;
+    }
+    figure {
+        display: inline;
+        float: right;
+        max-width: 30%;
+    }
+    .leadership,
+    nav {
+        clear: both;
+    }
+    footer {
+        height: 125px;
+    }
+    footer p {
+        display: inline;
+        float: left;
+        position: relative;
+        left: 30px;
+    }
+    footer img {
+        display: inline;
+        float: right;
+        position: relative;
+        right: 30px;
+    }
+}
+
+@media only screen and (min-width: 900px) {
+    header {
+        background-image: url(images/header-large.jpg);
+    }
+    header h1 {
+        font-size: 5em;
+        top: 100px;
+    }
+    figure {
+        display: block;
+        max-width: 100%;
+    }
+    .leadership,
+    nav {
+        clear: none;
+    }
+    .leadership {
+        display: inline;
+        float: left;
+        width: 33%;
+    }
+    main {
+        display: inline;
+        float: right;
+        width: 85%;
+    }
+    .section1 figure,
+    .section2 figure {
+        display: inline;
+        float: right;
+        max-width: 30%;
+    }
+    aside {
+        display: inline;
+        float: left;
+        width: 15%;
+    }
+    header p {
+        visibility: hidden;
+    }
+}
+
+@media only screen and (min-width: 1100px) {
+    .section3 figure {
+        display: inline;
+        float: right;
+        max-width: 30%;
+    }
+    blockquote {
+        display: inline;
+        float: right;
+        width: 25%;
+        clear: both;
+    }
+    figure,
+    h1,
+    h2 {
+        clear: both;
+    }
+}
