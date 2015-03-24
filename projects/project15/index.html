@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Project 15</title>
+  <style>
+    html {margin:1em; font-family:Helvetica, Arial, sans-serif;}
+    h2 {clear:both;}
+    .box {width:200px; height:200px; border:1px solid #000; background-color:#ddd;}
+  </style>
+</head>
+<body>
+  <header><h1>Project 15</h1></header>
+
+  <h2>Source and Target</h2>
+  <h3>Source</h3>
+  <input type="text" id="text1" placeholder="Type here">
+  <h3>Target</h3>
+  <input type="text" id="text2" readonly="true" placeholder="Echo the result here">
+
+  <script>
+  /*
+  1. Get the content from "text1" **as a user types**, and display it in "text2"
+  */
+  document.getElementById("text1").addEventListener("input", function(){
+    var userText = document.getElementById("text1");
+    var echoText = document.getElementById("text2");
+    echoText.value = userText.value;
+  });
+</script>
+
+<hr>
+
+<h2>Image Swap</h2>
+<img id="kitten" src="http://placekitten.com/g/300/200" title="A kitten" alt="A kitten"><br>
+<input type="text" id="get-img" placeholder="Enter image url here"><button id="update-img">Update</button>
+<p>Some possible test examples:</p>
+<ul>
+  <li>http://placekitten.com/g/400/320</li>
+  <li>http://www.nd.edu/assets/features/2012/features/laetare-2015/standard.jpg</li>
+  <li>http://place-hoff.com/400/350</li>
+  <li>http://www.placecage.com/c/200/300</li>
+</ul>
+<script>
+  /*
+  1. Get a new image value from the text box and use it to update the image source
+  */
+  document.getElementById("update-img").addEventListener("click", function(){
+    var newImage = document.getElementById("get-img");
+    document.getElementById("kitten").setAttribute("src",newImage.value);
+  });
+</script>
+
+<hr>
+
+<h2>Font Sizer</h2>
+<p id="to-style">This is my paragraph of stuff.</p><br>
+<input type="text" id="font-size" placeholder="Enter a font size"><button id="font-button">Make it so</button>
+<script>
+  /*
+  1. Get a font-size value from the text box and use it to change the font-size of "to-style"
+  */
+  document.getElementById("font-button").addEventListener("click", function(){
+    var newSize = document.getElementById("font-size");
+    document.getElementById("to-style").style.fontSize = newSize.value;
+  });
+</script>
+
+<hr>
+
+<h2>Attribute Reporter</h2>
+<img id="kitten2" src="http://placekitten.com/g/300/200" alt="A kitten"><br>
+<button id="get-attr">Log Attributes</button>
+<script>
+  /*
+  1. When the button is clicked, do the following:
+  2. Output the image "src" and "alt" attributes to the console
+  3. Output the image "width" and "height" to the console
+  */
+  document.getElementById("get-attr").addEventListener("click", function(){
+    /* var kitten2 = document.getElementById("kitten2") */
+    console.log(document.getElementById("kitten2").getAttribute("src"));
+    console.log(document.getElementById("kitten2").getAttribute("alt"));
+    console.log(document.getElementById("kitten2").width);
+    console.log(document.getElementById("kitten2").height);
+  });
+</script>
+
+<hr>
+
+<h2>Element Counter</h2>
+<input type="text" id="element-type" placeholder="Which element?"><br>
+<button id="count">Count the Elements</button>
+<input type="text" id="element-count" placeholder="Results here" readonly="true">
+<script>
+  /*
+  1. Get the user input for an element, id, class, or query and display how many exist on the page in the Results box
+  */
+  document.getElementById("count").addEventListener("click", function() {
+    document.getElementById("element-count").value = document.querySelectorAll(document.getElementById("element-type").value).length;
+  });
+</script>
+
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Project 14</title>
+  <style>
+    html {margin:1em; font-family:Helvetica, Arial, sans-serif;}
+    h2 {clear:both;}
+    .box {width:200px; height:200px; border:1px solid #000; background-color:#ddd;}
+  </style>
+</head>
+<body>
+  <header><h1>Project 14</h1></header>
+
+  <h2>One</h2>
+  <button id="button-one">Alert</button>
+  <script>
+  /*
+  1. Add an event listener to "button-one"
+  2. When the button is clicked, create an alert that informs the user they clicked a button
+  */
+  var alertButton = document.getElementById("button-one");
+  alertButton.addEventListener("click", function(){ alert("You clicked a button!");});
+
+</script>
+
+<h2>Two</h2>
+<button id="button-two">What is your name?</button>
+<div id="name-output"></div>
+<script>
+  /*
+  1. When "button-two" is clicked, use a "prompt" to ask for the users name
+  2. Wrap the result in a paragraph and output it to "name-output" x times (with x being the number of characters in the name)
+  3. Each paragraph should start with the text "Your name is:"
+  */
+  var promptButton = document.getElementById("button-two");
+  promptButton.addEventListener("click", function(){ 
+    var person = prompt("Please Enter Your Name");
+    var nameLen = person.length;
+    for (var i = 0; i < person.length; i++) {
+      var ourDiv = document.getElementById("name-output");
+      var newParagraph = document.createElement("p");
+      var copy = document.createTextNode("Your name is: " + person);
+      newParagraph.appendChild( copy );
+      ourDiv.appendChild( newParagraph );
+    };
+  });
+</script>
+
+<h2>Three</h2>
+<button id="button-three">Output Colors</button>
+<ul id="color-list"></ul>
+<script>
+  /*
+  1. Create an array with the seven colors of the rainbow
+  2. Loop through the array and append an "li" for each color to the "color-list" ul
+  */
+  var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+  var colorButton = document.getElementById("button-three");
+  colorButton.addEventListener("click", function(){
+    for (var i = 0; i < colors.length; i++) {
+      var j = colors[i];
+      var ourList = document.getElementById("color-list");
+      var newItem = document.createElement("li");
+      var copy = document.createTextNode(j);
+      newItem.appendChild( copy );
+      ourList.appendChild( newItem );
+    };
+  });
+</script>
+
+<h2>Four</h2>
+<div id="box1" class="box">Mouse Events</div>
+<script>
+  /*
+  1. Add two event listeners to the box. One for when the mouse enters, the other when it leaves
+  2. When the cursor enters the box, log to the console "Mouse entered the box".
+  3. When the cursor leaves the box, log to the console "Mouse left the box".
+  */
+  var boxArea = document.getElementById("box1");
+  boxArea.addEventListener("mouseenter", function(){console.log("Mouse entered the box")});
+  boxArea.addEventListener("mouseout", function(){console.log("Mouse left the box")});
+</script>
+
+<h2>Five</h2>
+<label>Input 1: <input type="text" id="input1"></label><br>
+<label>Input 2: <input type="text" id="input2"></label><br>
+<button id="button-compare">Compare</button>
+<script>
+  /*
+  1. Add an event listener to the "button-compare" button
+  2. When the button is clicked, compare the values of the two inputs
+  3. Output to the console the results of the comparison (true or false)
+  */
+  var compareButton = document.getElementById("button-compare");
+  compareButton.addEventListener("click", function(){
+    var valueOne = document.getElementById("input1").value
+    var valueTwo = document.getElementById("input2").value
+    if (valueOne > valueTwo) {
+      console.log("Input 1 is greater");
+      console.log("true");
+    }
+    if (valueOne <= valueTwo) {
+      console.log("Input 1 is not greater");
+      console.log("false");
+    }
+  });
+</script>
+
+</body>
+</html>
