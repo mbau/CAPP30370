@@ -96,12 +96,9 @@
   compareButton.addEventListener("click", function(){
     var valueOne = document.getElementById("input1").value
     var valueTwo = document.getElementById("input2").value
-    if (valueOne > valueTwo) {
-      console.log("Input 1 is greater");
+    if (valueOne == valueTwo) {
       console.log("true");
-    }
-    if (valueOne <= valueTwo) {
-      console.log("Input 1 is not greater");
+    } else {
       console.log("false");
     }
   });
