@@ -20,26 +20,26 @@
 	<div id="guess-group"><input type="text" id="guess"> <button id="go">Go</button></div>
 
 	<script>
-		feedback = document.getElementById("feedback");
-		reset = document.getElementById("reset");
 		startGame();
 
 		function startGame(){
+			feedback = document.getElementById("feedback");
+			reset = document.getElementById("reset");
 			var rand = Math.floor(Math.random() * 10+1);
 			console.log(rand);
 			var guessCount = 0;
 			document.getElementById("go").addEventListener("click", function() {
-				var guess = document.getElementById("guess").value;
+				var guess = Number(document.getElementById("guess").value);
 				if (guess >= 1 && guess <=10) {
 					guessCount++;
 					if(rand > guess) {
 						feedback.innerHTML = "Too Low!";
 					} else if (rand < guess) {
 						feedback.innerHTML = "Too High!";
-					} else {
+					} else if (rand === guess) {
 						document.getElementById("guess-group").style.display = "none";
 						reset.style.display = "initial";
-						if(guessCount == 1) {
+						if(guessCount === 1) {
 							feedback.innerHTML = "Correct! You took only " + guessCount + " guess to get the right number!";
 						} else {
 							feedback.innerHTML = "Correct! You took " + guessCount + " guesses to get the right number!";
