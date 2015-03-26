@@ -20,16 +20,19 @@
 	<div id="guess-group"><input type="text" id="guess"> <button id="go">Go</button></div>
 
 	<script>
+		var guessCount;
+		var rand;
+		var guess;
 		startGame();
 
 		function startGame(){
 			feedback = document.getElementById("feedback");
 			reset = document.getElementById("reset");
-			var rand = Math.floor(Math.random() * 10+1);
+			rand = Math.floor(Math.random() * 10+1);
 			console.log(rand);
-			var guessCount = 0;
+			guessCount = 0;
 			document.getElementById("go").addEventListener("click", function() {
-				var guess = Number(document.getElementById("guess").value);
+				guess = Number(document.getElementById("guess").value);
 				guessCount++;
 				if (guess >= 1 && guess <=10) {
 					if(rand > guess) {
@@ -57,6 +60,7 @@
 			reset.style.display = "none";
 			document.getElementById("guess-group").style.display = "block";
 			document.getElementById("guess").value = "";
+			feedback.innerHTML = "Guess a number between 1 and 10";
 			startGame();
 		};
 	</script>
