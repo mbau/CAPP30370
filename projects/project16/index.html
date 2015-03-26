@@ -30,31 +30,32 @@
 			var guessCount = 0;
 			document.getElementById("go").addEventListener("click", function() {
 				var guess = Number(document.getElementById("guess").value);
+				guessCount++;
 				if (guess >= 1 && guess <=10) {
-					guessCount++;
 					if(rand > guess) {
-						feedback.innerHTML = "Too Low!";
+						feedback.innerHTML = "Your guess of " + guess +" is too low!";
 					} else if (rand < guess) {
-						feedback.innerHTML = "Too High!";
+						feedback.innerHTML = "Your guess of " + guess +" is too high!";
 					} else if (rand === guess) {
 						document.getElementById("guess-group").style.display = "none";
-						reset.style.display = "initial";
+						reset.style.display = "block";
 						if(guessCount === 1) {
 							feedback.innerHTML = "Correct! You took only " + guessCount + " guess to get the right number!";
 						} else {
 							feedback.innerHTML = "Correct! You took " + guessCount + " guesses to get the right number!";
 						}
-						reset.addEventListener("click", restartGame());
+						reset.addEventListener("click", restartGame);
 					}
 				} else {
 					feedback.innerHTML = "Invalid Guess!";
 				}
+				document.getElementById("guess").value = "";
 			});
 		};
 
 		function restartGame() {
 			reset.style.display = "none";
-			document.getElementById("guess-group").style.display = "initial";
+			document.getElementById("guess-group").style.display = "block";
 			document.getElementById("guess").value = "";
 			startGame();
 		};
