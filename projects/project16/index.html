@@ -22,7 +22,7 @@
 	<script>
 		var guessCount;
 		var rand;
-		var guess;
+		var usrguess;
 		startGame();
 
 		function startGame(){
@@ -32,14 +32,14 @@
 			console.log(rand);
 			guessCount = 0;
 			document.getElementById("go").addEventListener("click", function() {
-				guess = Number(document.getElementById("guess").value);
+				usrguess = Number(document.getElementById("guess").value);
 				guessCount++;
-				if (guess >= 1 && guess <=10) {
-					if(rand > guess) {
-						feedback.innerHTML = "Your guess of " + guess +" is too low!";
-					} else if (rand < guess) {
-						feedback.innerHTML = "Your guess of " + guess +" is too high!";
-					} else if (rand === guess) {
+				if (usrguess >= 1 && usrguess <=10) {
+					if(rand > usrguess) {
+						feedback.innerHTML = "Your guess of " + usrguess +" is too low!";
+					} else if (rand < usrguess) {
+						feedback.innerHTML = "Your guess of " + usrguess +" is too high!";
+					} else if (rand === usrguess) {
 						document.getElementById("guess-group").style.display = "none";
 						reset.style.display = "block";
 						if(guessCount === 1) {
