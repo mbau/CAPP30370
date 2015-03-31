@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Project 17</title>
+  <style>
+    html {margin:1em; font-family:Helvetica, Arial, sans-serif;}
+    h2 {clear:both;}
+    .box {width:200px; height:200px; border:1px solid #000; background-color:#ddd;}
+  </style>
+  <!-- added jquery using google CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+  <header><h1>Project 17</h1></header>
+
+  <h2>One</h2>
+  <button id="button-one">Alert</button>
+  <script>
+  /*
+  1. Add an event listener to "button-one"
+  2. When the button is clicked, create an alert that informs the user they clicked a button
+  */
+  $("#button-one").click(function() {
+    alert("You clicked a button!");
+  });
+</script>
+
+<h2>Two</h2>
+<button id="button-two">What is your name?</button>
+<div id="name-output"></div>
+<script>
+  /*
+  1. When "button-two" is clicked, use a "prompt" to ask for the users name
+  2. Wrap the result in a paragraph and output it to "name-output" x times (with x being the number of characters in the name)
+  3. Each paragraph should start with the text "Your name is:"
+  */
+  $("#button-two").click(function() {
+    var person = prompt("Please Enter Your Name");
+    for (var i = 0; i < person.length; i++) {
+      $("#name-output").append("<p>Your name is: " + person + "</p>");
+    };
+  });
+</script>
+
+<h2>Three</h2>
+<button id="button-three">Output Colors</button>
+<ul id="color-list"></ul>
+<script>
+  /*
+  1. Create an array with the seven colors of the rainbow
+  2. Loop through the array and append an "li" for each color to the "color-list" ul
+  */
+  var colors = ["red", "orange", "yellow", "green", "blue", "indigo", "violet"];
+  $("#button-three").click(function() {
+    jQuery.each(colors, function(i,  val) {
+      $("#color-list").append("<li>" + val + "</li>");
+    });
+  });
+</script>
+
+<h2>Four</h2>
+<div id="box1" class="box">Mouse Events</div>
+<script>
+  /*
+  1. Add two event listeners to the box. One for when the mouse enters, the other when it leaves
+  2. When the cursor enters the box, log to the console "Mouse entered the box".
+  3. When the cursor leaves the box, log to the console "Mouse left the box".
+  */
+
+  $("#box1").mouseenter(function() {
+    console.log("Mouse entered the box");
+  });
+  $("#box1").mouseleave(function() {
+    console.log("Mouse left the box");
+  });
+</script>
+
+<h2>Five</h2>
+<label>Input 1: <input type="text" id="input1"></label><br>
+<label>Input 2: <input type="text" id="input2"></label><br>
+<button id="button-compare">Compare</button>
+<script>
+  /*
+  1. Add an event listener to the "button-compare" button
+  2. When the button is clicked, compare the values of the two inputs
+  3. Output to the console the results of the comparison (true or false)
+  */
+  $("#button-compare").click(function() {
+    var valueOne = $("#input1").val();
+    var valueTwo = $("#input2").val();
+    if(valueOne === valueTwo) {
+      console.log("true");
+    } else {
+      console.log("false");
+    }
+  });
+</script>
+
+<h2>Source and Target</h2>
+<h3>Source</h3>
+<input type="text" id="text1" placeholder="Type here">
+<h3>Target</h3>
+<input type="text" id="text2" readonly="true" placeholder="Echo the result here">
+
+<script>
+  /*
+  1. Get the content from "text1" **as a user types**, and display it in "text2"
+  */
+  $("#text1").keyup( function(){
+    $("#text2").val( $("#text1").val() );
+  });
+</script>
+
+<hr>
+
+<h2>Image Swap</h2>
+<img id="kitten" src="http://placekitten.com/g/300/200" title="A kitten" alt="A kitten"><br>
+<input type="text" id="get-img" placeholder="Enter image url here"><button id="update-img">Update</button>
+<p>Some possible test examples:</p>
+<ul>
+  <li>http://placekitten.com/g/400/320</li>
+  <li>http://www.nd.edu/assets/features/2012/features/laetare-2015/standard.jpg</li>
+  <li>http://place-hoff.com/400/350</li>
+  <li>http://www.placecage.com/c/200/300</li>
+</ul>
+<script>
+  /*
+  1. Get a new image value from the text box and use it to update the image source
+  */
+  $("#update-img").click(function(){
+    $("#kitten").attr("src",$("#get-img").val());
+  });
+</script>
+
+<hr>
+
+<h2>Font Sizer</h2>
+<p id="to-style">This is my paragraph of stuff.</p><br>
+<input type="text" id="font-size" placeholder="Enter a font size"><button id="font-button">Make it so</button>
+<script>
+  /*
+  1. Get a font-size value from the text box and use it to change the font-size of "to-style"
+  */
+  document.getElementById("font-button").addEventListener("click", function(){
+    var newSize = document.getElementById("font-size");
+    document.getElementById("to-style").style.fontSize = newSize.value;
+  });
+</script>
+
+<hr>
+
+<h2>Attribute Reporter</h2>
+<img id="kitten2" src="http://placekitten.com/g/300/200" alt="A kitten"><br>
+<button id="get-attr">Log Attributes</button>
+<script>
+  /*
+  1. When the button is clicked, do the following:
+  2. Output the image "src" and "alt" attributes to the console
+  3. Output the image "width" and "height" to the console
+  */
+  document.getElementById("get-attr").addEventListener("click", function(){
+    /* var kitten2 = document.getElementById("kitten2") */
+    console.log(document.getElementById("kitten2").getAttribute("src"));
+    console.log(document.getElementById("kitten2").getAttribute("alt"));
+    console.log(document.getElementById("kitten2").width);
+    console.log(document.getElementById("kitten2").height);
+  });
+</script>
+
+<hr>
+
+<h2>Element Counter</h2>
+<input type="text" id="element-type" placeholder="Which element?"><br>
+<button id="count">Count the Elements</button>
+<input type="text" id="element-count" placeholder="Results here" readonly="true">
+<script>
+  /*
+  1. Get the user input for an element, id, class, or query and display how many exist on the page in the Results box
+  */
+  document.getElementById("count").addEventListener("click", function() {
+    document.getElementById("element-count").value = document.querySelectorAll(document.getElementById("element-type").value).length;
+  });
+</script>
+
+</body>
+</html>
