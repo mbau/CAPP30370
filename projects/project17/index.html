@@ -142,9 +142,8 @@
   /*
   1. Get a font-size value from the text box and use it to change the font-size of "to-style"
   */
-  document.getElementById("font-button").addEventListener("click", function(){
-    var newSize = document.getElementById("font-size");
-    document.getElementById("to-style").style.fontSize = newSize.value;
+  $("#font-button").click( function(){
+    $("#to-style").css("font-size", $("#font-size").val() );
   });
 </script>
 
@@ -159,12 +158,9 @@
   2. Output the image "src" and "alt" attributes to the console
   3. Output the image "width" and "height" to the console
   */
-  document.getElementById("get-attr").addEventListener("click", function(){
-    /* var kitten2 = document.getElementById("kitten2") */
-    console.log(document.getElementById("kitten2").getAttribute("src"));
-    console.log(document.getElementById("kitten2").getAttribute("alt"));
-    console.log(document.getElementById("kitten2").width);
-    console.log(document.getElementById("kitten2").height);
+  $("#get-attr").click(function(){
+    console.log($("#kitten2").attr("src"));
+    console.log($("#kitten2").attr("alt"));
   });
 </script>
 
