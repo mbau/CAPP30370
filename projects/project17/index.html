@@ -161,6 +161,8 @@
   $("#get-attr").click(function(){
     console.log($("#kitten2").attr("src"));
     console.log($("#kitten2").attr("alt"));
+    console.log($("#kitten2").width());
+    console.log($("#kitten2").height());
   });
 </script>
 
@@ -174,8 +176,8 @@
   /*
   1. Get the user input for an element, id, class, or query and display how many exist on the page in the Results box
   */
-  document.getElementById("count").addEventListener("click", function() {
-    document.getElementById("element-count").value = document.querySelectorAll(document.getElementById("element-type").value).length;
+  $("#count").click(function() {
+    $("#element-count").val( $($("#element-type").val()).length );
   });
 </script>
 
