@@ -46,6 +46,10 @@
   // Task One code
   $("#colors li").click(function () {
     var index = $(this).index();
+    $(this).css("text-transform","uppercase");
+    $(this).css("font-weight","bold");
+    $(this).siblings().css("text-transform","lowercase");
+    $(this).siblings().css("font-weight","normal");
     if (index == 0){
       $(".color-list li").css("background-color","red");
     } else if (index == 1) {
