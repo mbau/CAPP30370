@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Project 18</title>
+  <style>
+    html {margin:2em; font-family:Helvetica, Arial, sans-serif;}
+    h1 {margin:0;}
+    h2 {color:#369;}
+    hr {margin:2em 0;}
+
+    .color-list {margin:0; padding:0; list-style:none;}
+    .color-list li {margin:0.5em 0; padding:0.5em; color:#fff; border:1px solid #000; background-color:#000;}
+    .color-list li:hover {cursor:pointer;}
+
+    nav ul {margin:0; padding:0; list-style:none;}
+    nav li {display:inline-block;}
+    nav li a {display:block; padding:1em; color:#ccc; text-decoration:none; background-color:gray;}
+    .tabs-sections {padding:0 1em; border:1px solid gray;}
+    .active a {color:#000; background-color:lightgray;}
+    .s2, .s3 {display:none;}
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+  <header><h1>Project 18</h1></header>
+
+  <p><b>REMINDER:</b> Write only javascript. DO NOT modify the HTML or CSS.</p>
+
+  <h2>Task One: Colorize Siblings</h2>
+  <p>When one of the &quot;li&quot;&apos;s is clicked:</p>
+  <ol>
+    <li>Update the background color of all li&apos;s to the color value of the clicked &quot;li&quot;</li>
+    <li>Make only the clicked item bold and uppercase</li>
+  </ol>
+  <ul id="colors" class="color-list">
+    <li>red</li>
+    <li>orange</li>
+    <li>yellow</li>
+    <li>green</li>
+    <li>blue</li>
+    <li>indigo</li>
+    <li>violet</li>
+  </ul>
+  <script>
+  // Task One code
+  $("#colors li").click(function () {
+    var index = $(this).index();
+    if (index == 0){
+      $(".color-list li").css("background-color","red");
+    } else if (index == 1) {
+      $(".color-list li").css("background-color","orange");
+    } else if (index == 2) {
+      $(".color-list li").css("background-color","yellow");
+    } else if (index == 3) {
+      $(".color-list li").css("background-color","green");
+    } else if (index == 4) {
+      $(".color-list li").css("background-color","blue");
+    } else if (index == 5) {
+      $(".color-list li").css("background-color","indigo");
+    } else if (index == 6) {
+      $(".color-list li").css("background-color","violet");
+    }
+  });
+</script>
+
+<hr>
+
+<h2>Task Two: Tab Switching</h2>
+<p>Add the jQuery so that when a nav item is clicked:</p>
+<ol>
+  <li>It becomes the active nav item (the light gray color)</li>
+  <li>The content below switches to show the correct section</li>
+</ol>
+<p><b>NOTE:</b> the page should not try and anchor link down to the target section.</p>
+
+<div class="tabs">
+  <nav>
+    <ul>
+      <li class="active"><a href="#one">One</a></li>
+      <li><a href="#two">Two</a></li>
+      <li><a href="#three">Three</a></li>
+    </ul>
+  </nav>
+
+  <div class="tabs-sections">
+    <section id="one" class="s s1">
+      <h2>Section One</h2>
+      <p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <i>quis nostrud exercitation ullamco</i> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+    <section id="two" class="s s2">
+      <h2>Section Two</h2>
+      <p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <i>quis nostrud exercitation ullamco</i> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+    <section id="three" class="s s3">
+      <h2>Section Three</h2>
+      <p>Lorem ipsum dolor sit amet, <b>consectetur adipisicing elit</b>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, <i>quis nostrud exercitation ullamco</i> laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </section>
+  </div>
+</div>
+
+<script>
+  // Task Two code
+  $("a").click(function() {
+    event.preventDefault();
+    $(this).parent().addClass("active");
+    $(this).parent().siblings().removeClass("active");
+    var index = $(this).parent().index();
+    if (index == 0) {
+      $(".s1").css("display","block");
+      $(".s2").css("display","none");
+      $(".s3").css("display","none");
+    } else if (index == 1) {
+      $(".s1").css("display","none");
+      $(".s2").css("display","block");
+      $(".s3").css("display","none");
+    } else if (index == 2) {
+      $(".s1").css("display","none");
+      $(".s2").css("display","none");
+      $(".s3").css("display","block");
+    }
+  });
+</script>
+
+</body>
+</html>
