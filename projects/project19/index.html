@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Project 19</title>
+  <style>
+    html {margin:2em; font-family:Helvetica, Arial, sans-serif;}
+    h1 {margin:0;}
+    h2 {color:#369;}
+    hr {margin:2em 0;}
+    .box {width:100px; height:100px; padding:2em; border:1px solid black; background-color:#069;}
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+</head>
+<body>
+
+  <h2>Task One</h2>
+  <p>Add the jQuery to accomplish the following effects in tandem when the box is clicked:</p>
+  <ol>
+    <li>Increase the width and height to 200px each</li>
+    <li>Increase the font size to 44px</li>
+    <li>Increase the border width to 10px</li>
+    <li>Animation should take a total of 1.5 seconds</li>
+  </ol>
+  <div class="box box1">I am a box.</div>
+
+  <script>
+    $(".box1").click(function() {
+      $(this).animate({
+        width: "200px",
+        height: "200px",
+        fontSize: "44px",
+        borderWidth: "10px"
+      }, 1500);
+    });
+  </script>
+
+  <hr>
+
+  <h2>Task Two</h2>
+  <p>Add the jQuery to accomplish the following effects **in sequence** when the box is clicked:</p>
+  <ol>
+    <li>Increase the width to 120px over half a second</li>
+    <li>Increase the height to 120px over half a second</li>
+    <li>Wait for 1 second</li>
+    <li>Increase the font size to 44px over 1 second</li>
+    <li>Increase the border radius large enough to make a circle over 1.5 seconds</li>
+    <li>When animation #4 is <b>complete</b>, change the text to "I am a circle."</li>
+  </ol>
+  <div class="box box2">I am a box.</div>
+
+  <script>
+  $(".box2").click(function () {
+    $(this).animate({width: "120px"},500);
+    $(this).animate({height: "120px"},500).delay(1000);
+    $(this).animate({fontSize: "44px"},1000);
+    $(this).animate({borderRadius: "50%"},1500, function () {
+      $(this).html("I am a circle.");
+    });
+  });
+
+  </script>
+
+</body>
+</html>
