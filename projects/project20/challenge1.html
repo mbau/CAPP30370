@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Project 20: Challenge 1</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    *, *:before, *:after {-moz-box-sizing:border-box; -webkit-box-sizing:border-box; box-sizing:border-box;}
+    nav {margin:0 0 1em;}
+    nav ul {margin:0; padding:0; list-style:none;}
+    nav a {display:block; padding:0.5em; text-align:center; text-decoration:none; border:1px solid gray; background-color:#eee;}
+    h2 {margin-top:0;}
+    p:last-child {margin-bottom:0;}
+    img {max-width:100%;}
+    section {margin:0 0 1em; background-color:#ddd;}
+    div {padding:1em; border:1px solid #000; background-color:#eee;}
+
+    @media only screen and (min-width:600px){
+      nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+      }
+      nav ul li {
+        flex: 1;
+      }
+      #section1, #section2, #section3 {
+        display: flex;
+      }
+      .text-block {
+        flex: 1;
+      }
+      .img-block {
+        flex: 1;
+      }
+    }
+
+    @media only screen and (min-width:900px){
+      #section1, #section2, #section3 {
+        display: flex;
+      }
+      .text-block {
+        flex: 2;
+      }
+      .img-block {
+        flex: 1;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Project 20: Challenge 1</h1>
+    <nav>
+      <ul>
+        <li><a href="#section1">Section One</a></li>
+        <li><a href="#section2">Section Two</a></li>
+        <li><a href="#section3">Section Three</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="section1" id="section1">
+      <div class="text-block">
+        <h2>Section 1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit.</p>
+      </div>
+      <figure class="img-block">
+        <img src="http://placehold.it/800x500" alt="A photo">
+      </figure>
+    </section>
+
+    <section class="section2" id="section2">
+      <div class="text-block">
+        <h2>Section 2-1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit.</p>
+      </div>
+      <div class="text-block">
+        <h2>Section 2-2</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </section>
+
+    <section class="section3" id="section3">
+      <div class="text-block section3-1">
+        <h2>Section 3-1</h2>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+      </div>
+      <div class="text-block section3-2">
+        <h2>Section 3-2</h2>
+        <img src="http://placehold.it/800x500" alt="A photo">
+      </div>
+      <div class="text-block section3-3">
+        <h2>Section 3-3</h2>
+        <img src="http://placehold.it/400x300" alt="A photo">
+        <p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2015 - Project 20: Challenge 1</p>
+  </footer>
+
+</body>
+</html>
