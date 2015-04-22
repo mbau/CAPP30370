@@ -24,19 +24,32 @@
   </section>
   <script>
 
-$.getJSON( "http://api.openweathermap.org/data/2.5/weather?zip=46556,us&units=imperial")
-.done(function( data ) {
-  console.log(data);
-  console.log(data.name);
-  console.log(data.weather[0].description);
-  console.log(data.main.temp);
-  console.log(data.main.humidity);
-  console.log(data.wind.speed);
-})
-.fail(function( jqxhr, textStatus, error ) {
-  console.log( "Request Failed: " + textStatus + ", " + error );
-});
+    $.getJSON( "http://api.openweathermap.org/data/2.5/weather?zip=46556,us&units=imperial")
+    .done(function( data ) {
+      name = data.name;
+      conditions = data.weather[0].description;
+      temp = data.main.temp;
+      humid = data.main.humidity;
+      wind = data.wind.speed;
+      icon = data.weather[0].icon;
 
-</script>
+      console.log(data.weather[0].icon);
+
+      conditions = conditions.toLowerCase().replace(/\b[a-z]/g, function(letter) {
+        return letter.toUpperCase();
+      });
+
+      $("h1").append(name);
+      $("#data-current").append(conditions);
+      $("#data-temp").append(Math.round(temp));
+      $("#data-humidity").append(humid);
+      $("#data-wind").append(wind);
+      $("#data-img").append("<img src=\"http://openweathermap.org/img/w/" + icon + ".png\" alt=\"Weather Icon\">")
+    })
+    .fail(function( jqxhr, textStatus, error ) {
+      console.log( "Request Failed: " + textStatus + ", " + error );
+    });
+
+  </script>
 </body>
 </html>
