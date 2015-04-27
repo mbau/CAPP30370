@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Project 22</title>
+	<style>
+		html {padding:1em; font-size:3em; font-family:Helvetica, Arial, sans-serif;}
+		h1 {margin:0; font-size:1em;}
+		input, button {font-size:1em;}
+		li button {font-size:0.5em;}
+	</style>
+</head>
+
+<body>
+	<h1>TODO List</h1>
+	<input id="input" type="text"><button id="add">Add</button>
+	<ul id="list"></ul>
+</body>
+
+<script src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
+<script>
+	if(window.localStorage !== undefined){
+		function appendTaskToList(val) {
+			$('#list').append("<li>" + val + "</li>");
+		}
+		if (localStorage["tasks"]) {
+			var tasks = JSON.parse(localStorage["tasks"]);
+		}else {
+			var tasks = [];
+		}
+		for(var i=0;i<tasks.length;i++) {
+			appendTaskToList(tasks[i]);
+		}
+		var addTask = function() {
+			var val = $("#input").val();
+			if(jQuery.inArray(val,tasks) == -1 ){
+				tasks.push(val);
+				localStorage["tasks"] = JSON.stringify(tasks);
+				appendTaskToList(val);
+			} else {
+				console.log(val + " is already on list")
+			}
+		}
+		$("#add").click(addTask);
+		$("ul").on("click", "li", function() { //enables users to click on task to remove it (i.e. mark as complete)
+			console.log("delete " + this.innerHTML);
+			tasks.splice(jQuery.inArray(this.innerHTML,tasks),1);
+			localStorage.removeItem("tasks");
+			localStorage["tasks"] = JSON.stringify(tasks);
+			this.remove();
+		});
+	}
+</script>
+</html>
