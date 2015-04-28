@@ -42,7 +42,6 @@
 		}
 		$("#add").click(addTask);
 		$("ul").on("click", "li", function() { //enables users to click on task to remove it (i.e. mark as complete)
-			console.log("delete " + this.innerHTML);
 			tasks.splice(jQuery.inArray(this.innerHTML,tasks),1);
 			localStorage.removeItem("tasks");
 			localStorage["tasks"] = JSON.stringify(tasks);
