@@ -1,5 +1,14 @@
 $(document).ready( function() {
-	setTimeout( function(){
-		$("#luxury").replaceWith("<h2 id=\"luxury\">COLORADO</h2>");
-	},2000);
+	var cycle = $(".cycle");
+	var cycleIndex = -1;
+
+	function showNextCycle() {
+		++cycleIndex;
+		cycle.eq(cycleIndex % cycle.length)
+		.fadeIn(1000)
+		.delay(3000)
+		.fadeOut(1000, showNextCycle);
+	}
+
+	showNextCycle();
 });

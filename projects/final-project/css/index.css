@@ -14,50 +14,45 @@ html {
 }
 
 nav {
-	overflow: hidden;
-	background-color: rgba(0, 0, 0, 0.6);
-	height: 45px;
-	line-height: 45px;
-	font-family: 'Open Sans Condensed', sans-serif;
-	text-transform: uppercase;
-	position: fixed;
 	z-index: 10;
+	background-color: rgba(0, 0, 0, 0.6);
+	position: fixed;
+	top: 0;
 	width: 100%;
 }
 
-#nav {
+nav ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
 	list-style: none;
-	margin: 0 auto;
-	
+	align-items: center;
+	flex-wrap: nowrap;
 }
 
-#nav li {
-	float: right;
-}
-
-#logo {
-	float: left;
-	height: 45px;
-	position: relative;
-	left: 30px;
+nav ul li {
+	flex: 1;
+	text-transform: uppercase;
+	font-family: 'Open Sans Condensed', sans-serif;
+	text-align:center;
 }
 
 #nav li a:link, #nav li a:visited {
-	display: block;
-	width: 100px;
-	text-align: center;
 	text-decoration: none;
-	margin: 0 5px;
 	color: #DAD3C4;
-	position: relative;
-	right: 30px;
 }
 
 #nav li a:hover {
 	color: #91C1DF;
 }
 
-#welcome, #to, #luxury {
+#logo {
+	height: 45px;
+}
+
+#welcome, #to, .cycle {
 	margin: 0 auto;
 	width: 100%;
 	position: absolute;
@@ -72,15 +67,17 @@ nav {
 	top: 100px;
 }
 
-#luxury {
+.cycle {
 	top: 130px;
 	font-family: 'Halant', serif;
 	font-weight: 300;
 	font-size: 60px;
+	display: none;
 }
 
 #jumbotron img {
 	width: 100%;
+	z-index: -1;
 }
 
 #section1 img, #section2 img {
@@ -102,7 +99,7 @@ footer {
 		top: 160px;
 	}
 
-	#luxury {
+	.cycle {
 		top: 200px;
 		font-size: 80px;
 	}
@@ -118,7 +115,5 @@ footer {
 }
 
 @media only screen and (min-width: 1000px) {
-	#section1 img, #section2 img {
-		width: 50%;
-	}
+
 }
