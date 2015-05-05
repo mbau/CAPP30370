@@ -123,19 +123,10 @@ footer {
 }
 
 @media only screen and (min-width: 700px) {
-	img {max-width:100%;}
-/*
-	#welcome, #to {
-		top: 110px;
-		font-size: 60px;
+	img {
+		max-width:100%;
 	}
-
-	#to {
-		top: 160px;
-	}
-*/
 	.cycle {
-/*		top: 200px; */
 		font-size: 80px;
 	}
 
@@ -158,7 +149,6 @@ footer {
 	.section3-2, .section3-3{
 		flex: 1;
 	}
-
 }
 
 @media only screen and (min-width: 1000px) {
