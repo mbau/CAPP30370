@@ -25,3 +25,9 @@ $(window).resize(function() {
 	console.log("Width: " + viewportWidth);
 	$("#jumbotron").css("height", viewportHeight);
 });
+
+$.each( $('*'), function() { 
+    if( $(this).width() > $('body').width()) {
+        console.log("Wide Element: ", $(this), "Width: ", $(this).width()); 
+    } 
+});
