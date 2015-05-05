@@ -40,7 +40,7 @@ p {
 	margin-bottom: 1.5em;
 }
 
-article, div {
+article, .text-block {
 	padding:1em;
 }
 
@@ -82,7 +82,7 @@ nav ul li {
 	height: 45px;
 }
 
-section img {
+div img {
 	width: 100%;
 }
 
