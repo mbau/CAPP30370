@@ -4,14 +4,14 @@ There are three pages, the homepage (index.html), the explore page (activites.ht
 
 ##Starred Items:  
 ###HTML:  
-*srcset: Implemented in activities.html page, starting on line 29  
+* srcset: Implemented in activities.html page, starting on line 29  
 ###CSS:  
-*Two breakpoints: implemented in every .css file, towards the bottom of the file, at 700px and 1000px  
-*Three column layout: index.html does this using a flexbox at the bottom of the page, as well as on other pages  
-*CSS Animation: pictures at the top of dining.html make a slideshow using css animations  
-*Flexbox: index.html does this using a flexbox at the bottom of the page, also found on other pages and in the nav bar of every page  
-*Background Image: found on index.html, in the #jumbotron div  
+* Two breakpoints: implemented in every .css file, towards the bottom of the file, at 700px and 1000px  
+* Three column layout: index.html does this using a flexbox at the bottom of the page, as well as on other pages  
+* CSS Animation: pictures at the top of dining.html make a slideshow using css animations  
+* Flexbox: index.html does this using a flexbox at the bottom of the page, also found on other pages and in the nav bar of every page  
+* Background Image: found on index.html, in the #jumbotron div  
 ###Javascript:  
-*Javascript Animation: 
-*Toggle css style: In index.html, the large image at the top of the page is sized based on the dimensions of the viewport, which javascript reads and then adds css height as needed to the div. Implemented in index.js  
-*Element visibility: In index.html, the words at the top fade in and out, implemented in index.js  
+* Javascript Animation: 
+* Toggle css style: In index.html, the large image at the top of the page is sized based on the dimensions of the viewport, which javascript reads and then adds css height as needed to the div. Implemented in index.js  
+* Element visibility: In index.html, the words at the top fade in and out, implemented in index.js  
