@@ -5,6 +5,11 @@ $(document).ready( function() {
 
 	$("#jumbotron").css("height", viewportHeight);
 
+
+	$("#welcome").animate({top: '70px'},1000);
+	$("#to").animate({top: '110px'},1000);
+
+
 	var cycle = $(".cycle");
 	var cycleIndex = -1;
 

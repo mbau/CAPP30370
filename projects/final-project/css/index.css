@@ -94,7 +94,7 @@ nav ul li {
 	margin: 0 auto;
 	width: 100%;
 	position: absolute;
-	top: 70px;
+	top: -70px;
 	color: #fff;
 	font-family: 'Herr Von Muellerhoff', cursive;
 	font-size: 40px;
@@ -103,7 +103,7 @@ nav ul li {
 }
 
 #to {
-	top: 100px;
+	top: -100px;
 }
 
 .cycle {
@@ -124,7 +124,7 @@ footer {
 
 @media only screen and (min-width: 700px) {
 	img {max-width:100%;}
-
+/*
 	#welcome, #to {
 		top: 110px;
 		font-size: 60px;
@@ -133,9 +133,9 @@ footer {
 	#to {
 		top: 160px;
 	}
-
+*/
 	.cycle {
-		top: 200px;
+/*		top: 200px; */
 		font-size: 80px;
 	}
 

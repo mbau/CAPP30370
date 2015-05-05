@@ -15,6 +15,6 @@ There are three pages, the homepage (index.html), the explore page (activites.ht
 * Background Image: found on index.html, in the #jumbotron div  
 
 ###Javascript:  
-* Javascript Animation: 
+* Javascript Animation: In index.html, I have the words 'welcome to' slide into the page using animation code found in index.js  
 * Toggle css style: In index.html, the large image at the top of the page is sized based on the dimensions of the viewport, which javascript reads and then adds css height as needed to the div. Implemented in index.js  
 * Element visibility: In index.html, the words at the top fade in and out, implemented in index.js  
