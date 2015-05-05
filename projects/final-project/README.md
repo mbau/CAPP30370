@@ -3,6 +3,8 @@ This site's purpose is to provide users with more information about The Broadmoo
 
 There are three pages, the homepage (index.html), the explore page (activites.html), and the dining page (dining.html). These can all be reached using the nav bar.
 
+I got all of the images and copy from the hotel's actual site, broadmoor.com
+
 ##Starred Items:  
 ###HTML:  
 * srcset: Implemented in activities.html page, starting on line 29  
