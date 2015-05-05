@@ -1,3 +1,4 @@
+#CAPP30370 Final Project
 This site's purpose is to provide users with more information about The Broadmoor Hotel, a resort in my hometown. From the site, a user can get more information about the hotel itself, as well as some of the dining options and the activities that are on site. The goal is to educate the user about the hotel.
 
 There are three pages, the homepage (index.html), the explore page (activites.html), and the dining page (dining.html). These can all be reached using the nav bar.
